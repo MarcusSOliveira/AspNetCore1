@@ -1,0 +1,31 @@
+﻿<html ng-app="app">
+<head>
+        
+    <title>Página principal</title>
+    
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-theme.css" rel="stylesheet" />
+    
+    <script src="js/angular.js"></script>
+    <script src="js/angular-route.js"></script>
+
+    <script src="app/app.js"></script>
+    <script src="app/controllers/cadastro-controller.js"></script>
+    <script src="app/controllers/consulta-controller.js"></script>
+
+</head>
+<body class="container">
+    <div class="well well-sm">
+        <h2>Projeto Controle de Produtos</h2>
+        <ul>
+            <li> <a href="#produto/cadastro">Cadastrar Produtos</a> </li>
+            <li> <a href="#produto/consulta">Consultar Produtos</a> </li>
+        </ul>
+    </div>
+
+    <div class="col-md-12">
+        <div ng-view></div>
+    </div>
+
+</body>
+</html>

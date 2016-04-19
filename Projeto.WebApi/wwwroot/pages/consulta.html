@@ -1,0 +1,41 @@
+﻿<div class="col-md-12">
+    <h4>Consulta de Produtos</h4>
+    <hr />
+
+    <div>{{mensagem}}</div>
+
+    <table class="table table-hover" ng-init="consultar()">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Nome do Produtos</th>
+                <th>Preço</th>
+                <th>Quantidade</th>
+                <th>Total</th>
+                <th>Operações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="p in produtos">
+                <td>{{p.IdProduto}}</td>
+                <td>{{p.Nome}}</td>
+                <td>{{p.Preco | currency : 'R$' }}</td>
+                <td>{{p.Quantidade}}</td>
+                <td>{{(p.Preco * p.Quantidade) | currency : 'R$'}}</td>
+                <td>
+                    <button class="btn btn-danger btn-sm">
+                        Excluir
+                    </button>
+                </td>
+
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Quantidade de registros: {{produtos.length}}</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</div>

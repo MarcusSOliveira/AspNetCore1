@@ -1,0 +1,28 @@
+﻿<div class="col-md-4">
+    <h4>Cadastro de Produtos</h4>
+    <hr />
+
+    <label>Nome do Produto:</label>
+    <input type="text" class="form-control"
+           ng-model="produto.Nome" />
+    <br />
+
+    <label>Preço:</label>
+    <input type="text" class="form-control" 
+           ng-model="produto.Preco"/>
+    <br />
+
+    <label>Quantidade:</label>
+    <input type="number" class="form-control" 
+           ng-model="produto.Quantidade"/>
+    <br />
+
+    <button class="btn btn-primary" ng-click="cadastrar()">
+        Cadastrar Produto
+    </button>
+
+    <hr />
+
+    {{mensagem}}
+
+</div>
